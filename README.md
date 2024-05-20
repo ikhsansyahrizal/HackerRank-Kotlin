@@ -27,6 +27,7 @@ import kotlin.text.*
  * The function accepts LONG_INTEGER_ARRAY ar as parameter.
  */
 
+```kotlin
 fun aVeryBigSum(ar: Array<Long>): Long {
     // Write your code here
     var result: Long = 0
@@ -45,6 +46,7 @@ fun main(args: Array<String>) {
 
     println(result)
 }
+```
 
 
 <img width="800" alt="aVeryBigSum" src="https://github.com/ikhsansyahrizal/HackerRank-Kotlin/assets/72852911/31166465-36ba-421c-8cd1-2db80132847d">
