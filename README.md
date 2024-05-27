@@ -1,6 +1,3 @@
-#a very big sum 
-
-
 import java.io.*
 import java.math.*
 import java.security.*
@@ -21,34 +18,39 @@ import kotlin.sequences.*
 import kotlin.text.*
 
 /*
- * Complete the 'aVeryBigSum' function below.
+ * Complete the 'compareTriplets' function below.
  *
- * The function is expected to return a LONG_INTEGER.
- * The function accepts LONG_INTEGER_ARRAY ar as parameter.
+ * The function is expected to return an INTEGER_ARRAY.
+ * The function accepts following parameters:
+ *  1. INTEGER_ARRAY a
+ *  2. INTEGER_ARRAY b
  */
 
 ```kotlin
-fun aVeryBigSum(ar: Array<Long>): Long {
-    // Write your code here
-    var result: Long = 0
-    for (i in ar.indices) {
-        result += ar.elementAt(i)
+fun compareTriplets(a: Array<Int>, b: Array<Int>): Array<Int> {
+    var alice = 0
+    var bob = 0
+    for(i in a.indices) {
+            
+        if (a[i] > b[i]) {
+            alice++
+        }
+        if (a[i] < b[i]) {
+            bob++
+        }
     }
+    var result = arrayOf(alice, bob)
     return result
 }
 
 fun main(args: Array<String>) {
-    val arCount = readLine()!!.trim().toInt()
 
-    val ar = readLine()!!.trimEnd().split(" ").map{ it.toLong() }.toTypedArray()
+    val a = readLine()!!.trimEnd().split(" ").map{ it.toInt() }.toTypedArray()
 
-    val result = aVeryBigSum(ar)
+    val b = readLine()!!.trimEnd().split(" ").map{ it.toInt() }.toTypedArray()
 
-    println(result)
+    val result = compareTriplets(a, b)
+
+    println(result.joinToString(" "))
 }
 ```
-
-
-<img width="800" alt="aVeryBigSum" src="https://github.com/ikhsansyahrizal/HackerRank-Kotlin/assets/72852911/31166465-36ba-421c-8cd1-2db80132847d">
-
-
