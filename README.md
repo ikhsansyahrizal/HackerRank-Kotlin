@@ -1,5 +1,4 @@
-#a very big sum 
-
+## Plus Minus
 
 import java.io.*
 import java.math.*
@@ -21,34 +20,49 @@ import kotlin.sequences.*
 import kotlin.text.*
 
 /*
- * Complete the 'aVeryBigSum' function below.
+ * Complete the 'plusMinus' function below.
  *
- * The function is expected to return a LONG_INTEGER.
- * The function accepts LONG_INTEGER_ARRAY ar as parameter.
+ * The function accepts INTEGER_ARRAY arr as parameter.
  */
-
 ```kotlin
-fun aVeryBigSum(ar: Array<Long>): Long {
+fun plusMinus(arr: Array<Int>): Unit {
     // Write your code here
-    var result: Long = 0
-    for (i in ar.indices) {
-        result += ar.elementAt(i)
+    var zero = 0
+    var plus = 0
+    var minus = 0
+    for(num in arr) {
+        when {
+            num == 0 -> zero++
+            num < 0 -> minus++
+            num > 0 -> plus++
+        }
     }
-    return result
+    
+    val plusRatio = plus.toDouble() / arr.size
+    val minusRatio = minus.toDouble() / arr.size
+    val zeroRatio = zero.toDouble() / arr.size
+    
+    println(String.format("%.6f", plusRatio))
+    println(String.format("%.6f", minusRatio))
+    println(String.format("%.6f", zeroRatio))
 }
 
 fun main(args: Array<String>) {
-    val arCount = readLine()!!.trim().toInt()
+    val n = readLine()!!.trim().toInt()
 
-    val ar = readLine()!!.trimEnd().split(" ").map{ it.toLong() }.toTypedArray()
+    val arr = readLine()!!.trimEnd().split(" ").map{ it.toInt() }.toTypedArray()
 
-    val result = aVeryBigSum(ar)
-
-    println(result)
+    plusMinus(arr)
 }
 ```
 
+&nbsp;
+&nbsp;
 
-<img width="800" alt="aVeryBigSum" src="https://github.com/ikhsansyahrizal/HackerRank-Kotlin/assets/72852911/31166465-36ba-421c-8cd1-2db80132847d">
+
+<img width="1000" alt="Screenshot 2024-06-18 at 20 05 22" src="https://github.com/ikhsansyahrizal/HackerRank-Kotlin/assets/72852911/603cbdcb-953c-4688-be48-bd46ff1c3529">
+
+
+
 
 
