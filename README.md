@@ -60,9 +60,6 @@ fun main(args: Array<String>) {
 &nbsp;
 
 
-<img width="1000" alt="Screenshot 2024-06-18 at 20 05 22" src="https://github.com/ikhsansyahrizal/HackerRank-Kotlin/assets/72852911/603cbdcb-953c-4688-be48-bd46ff1c3529">
-
-
-
+<img width="1000" alt="Screenshot 2024-06-18 at 20 09 49" src="https://github.com/ikhsansyahrizal/HackerRank-Kotlin/assets/72852911/10441829-131d-4f04-9999-7786598087f7">
 
 
